@@ -1,0 +1,35 @@
+apiVersion: v1beta1
+kind: AgentConfig
+metadata:
+  name: seedsno2
+rendezvousIP: 172.16.25.98
+hosts:
+  - hostname: seedsno2
+    interfaces:
+      - name: ens33
+        macAddress: 00:50:56:86:95:27
+    networkConfig:
+      interfaces:
+        - name: ens33
+          type: ethernet
+          state: up
+          mac-address: 00:50:56:86:95:27
+          ipv4:
+            enabled: true
+            address:
+              - ip: 172.16.25.98
+                prefix-length: 24
+            dhcp: false
+      dns-resolver:
+        config:
+          server:
+            - 172.16.15.6
+      routes:
+        config:
+          - destination: 0.0.0.0/0
+            next-hop-address: 172.16.25.1
+            next-hop-interface: ens33
+            table-id: 254
+  
+        
+       

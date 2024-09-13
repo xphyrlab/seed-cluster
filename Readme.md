@@ -10,12 +10,11 @@
     Note: On the virtual machine (VM) where you plan to install the Seed Cluster, set the disk.enableUUID parameter to TRUE.
 
 ### Image Creation:
-   Navigate to the install directory:
    Open a terminal and use the cd command to navigate to the directory where the installation directory is present. The installation directory must contain the following files
    
    1. agent-config.yaml
    2. install-config.yaml
-   3. openshift/machine-config.yaml files are located.
+   3. openshift/machine-config.yaml
    
    Run the following command to create the installation:
      

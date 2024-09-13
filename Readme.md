@@ -1,8 +1,8 @@
-## Installing Seed Cluster in OpenShift
-# This guide outlines the steps for installing a Seed Cluster in OpenShift.
+# Installing Seed Cluster in OpenShift
+## This guide outlines the steps for installing a Seed Cluster in OpenShift.
 
 
-Directory Structure:
+### Directory Structure:
  1. Create a directory named openshift under your desired installation directory. This will hold your machine configuration file.
  2. Inside the openshift directory, create a machine configuration file (e.g., machine-config.yaml).
     Ensure the file specifies a partition named varlibcontainers with at least 522,240 MiB size and starting after 133,120 MiB (accounting for a 120 GB pre-allocated space).

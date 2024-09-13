@@ -9,21 +9,23 @@
 
     Note: On the virtual machine (VM) where you plan to install the Seed Cluster, set the disk.enableUUID parameter to TRUE.
 
-Image Creation:
+### Image Creation:
+   Navigate to the install directory:
+   Open a terminal and use the cd command to navigate to the directory where the installation directory is present. The installation directory must contain the following files
+   
+   1. agent-config.yaml
+   2. install-config.yaml
+   3. openshift/machine-config.yaml files are located.
+   
+   Run the following command to create the installation:
+     
+     openshift-install --dir install agent create image
 
-    Create Installation Image:
 
-        Open a terminal and navigate to the install directory which contains the following files:
-        a) agent-config.yaml
-        b) install-config.yaml
-        c) openshift/machine-config.yaml
-        Run the following command to create the installation:
-        openshift-install --dir install agent create image
+### Generating a seed image with the Lifecycle Agent
 
-
-Generating a seed image with the Lifecycle Agent
-    1. Set the AUTHFILE environment variable to point to the location of your container authentication file:
+   1. Set the AUTHFILE environment variable to point to the location of your container authentication file:
     $export AUTHFILE=${XDG_RUNTIME_DIR}/containers/auth.json
     
-    2. Set the rhcosLiveIso environment variable:
+   2. Set the rhcosLiveIso environment variable:
     $export rhcosLiveIso="https://mirror.openshift.com/pub/openshift-v4/amd64/dependencies/rhcos/latest/rhcos-live.x86_64.iso"

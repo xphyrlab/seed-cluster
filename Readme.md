@@ -1,5 +1,5 @@
-##Installing Seed Cluster in OpenShift
-This guide outlines the steps for installing a Seed Cluster in OpenShift.
+## Installing Seed Cluster in OpenShift
+# This guide outlines the steps for installing a Seed Cluster in OpenShift.
 
 
 Directory Structure:
